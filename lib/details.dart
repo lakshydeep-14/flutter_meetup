@@ -20,10 +20,6 @@ class _DetailsScreenState extends State<DetailsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //     title: Text(
-      //   widget.artists.title,
-      // )),
       floatingActionButton: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 50.0),
         child: Row(
@@ -81,7 +77,6 @@ class _DetailsScreenState extends State<DetailsScreen> {
           ],
         ),
       ),
-
       body: SafeArea(
         child: SingleChildScrollView(
             padding: const EdgeInsets.only(bottom: 50),

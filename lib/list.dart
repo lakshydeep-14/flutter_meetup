@@ -112,6 +112,7 @@ Widget lists() {
     child: ListView.builder(
       itemCount: data.length,
       shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
       itemBuilder: ((context, index) {
         return GestureDetector(
             onTap: () => Navigator.push(
