@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_meetup/details.dart';
 import 'package:flutter_meetup/model.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
@@ -116,7 +117,7 @@ class ItemCard2 extends StatelessWidget {
                               fontWeight: FontWeight.w500,
                             ),
                           ),
-                          const SizedBox(height: 3),
+                          const SizedBox(height: 15),
                           RichText(
                               text: TextSpan(children: [
                             const TextSpan(
@@ -139,6 +140,7 @@ class ItemCard2 extends StatelessWidget {
                                 text: "NPR. " + artists.price,
                                 style: const TextStyle(color: Colors.black)),
                           ])),
+                          const SizedBox(height: 10),
                           RatingBarIndicator(
                             rating: double.parse(artists.rating),
                             itemBuilder: (context, index) => const Icon(
@@ -149,10 +151,10 @@ class ItemCard2 extends StatelessWidget {
                             itemSize: 21.0,
                             direction: Axis.horizontal,
                           ),
-                          const SizedBox(height: 5),
+                          const SizedBox(height: 15),
                           Text(
                             '                        More Details',
-                            style: TextStyle(color: Colors.blue[800]),
+                            style: TextStyle(color: mainColor),
                           ),
                         ],
                       ),
