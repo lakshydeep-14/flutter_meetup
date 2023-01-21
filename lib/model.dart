@@ -1,6 +1,6 @@
 class Artists {
-  final String? id,
-      photo,
+  final int id;
+  final String photo,
       title,
       price,
       date,
@@ -8,17 +8,20 @@ class Artists {
       desc,
       category,
       rating,
-      artistName;
+      artistName,
+      artistPhoto;
 
-  Artists(
-      {this.id,
-      this.photo,
-      this.title,
-      this.price,
-      this.date,
-      this.location,
-      this.desc,
-      this.category,
-      this.rating,
-      this.artistName});
+  Artists({
+    required this.id,
+    required this.photo,
+    required this.title,
+    required this.price,
+    required this.date,
+    required this.location,
+    required this.desc,
+    required this.category,
+    required this.rating,
+    required this.artistName,
+    required this.artistPhoto,
+  });
 }
