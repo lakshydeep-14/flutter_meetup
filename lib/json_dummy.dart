@@ -11,12 +11,16 @@ List data = [
       location: 'Kathmandu, Nepal',
       desc: '''
 Handmade Damascus pocket knife rosewood handle birthday gift folding knife groomsman gift anniversary wedding father's day gift for lover.
+<<<<<<< HEAD
 This Beautiful folding Pocket knife have Razor sharp cutting edge come with leather sheath.Handmade Damascus pocket knife rosewood handle birthday gift folding knife groomsman gift anniversary wedding father's day gift for lover.
 This Beautiful folding Pocket knife have Razor sharp cutting edge come with leather sheath.Handmade Damascus pocket knife rosewood handle birthday gift folding knife groomsman gift anniversary wedding father's day gift for lover.
 This Beautiful folding Pocket knife have Razor sharp cutting edge come with leather sheath.Handmade Damascus pocket knife rosewood handle birthday gift folding knife groomsman gift anniversary wedding father's day gift for lover.
 This Beautiful folding Pocket knife have Razor sharp cutting edge come with leather sheath.Handmade Damascus pocket knife rosewood handle birthday gift folding knife groomsman gift anniversary wedding father's day gift for lover.
 This Beautiful folding Pocket knife have Razor sharp cutting edge come with leather sheath.Handmade Damascus pocket knife rosewood handle birthday gift folding knife groomsman gift anniversary wedding father's day gift for lover.
 This Beautiful folding Pocket knife have Razor sharp cutting edge come with leather sheath.Handmade Damascus pocket knife rosewood handle birthday gift folding knife groomsman gift anniversary wedding father's day gift for lover.
+=======
+
+>>>>>>> subarna
 This Beautiful folding Pocket knife have Razor sharp cutting edge come with leather sheath.
 ''',
       category: 'Tools',
@@ -84,6 +88,10 @@ This Beautiful folding Pocket knife have Razor sharp cutting edge come with leat
       location: 'Kathmandu, Nepal',
       desc: '''
 Handmade Damascus pocket knife rosewood handle birthday gift folding knife groomsman gift anniversary wedding father's day gift for lover.
+<<<<<<< HEAD
+=======
+
+>>>>>>> subarna
 This Beautiful folding Pocket knife have Razor sharp cutting edge come with leather sheath.
 ''',
       category: 'Tools',
