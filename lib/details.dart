@@ -224,7 +224,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
             fit: BoxFit.cover,
           ),
           Positioned(
-            top: 15,
+            top: 25,
             left: 15,
             child: GestureDetector(
               onTap: () => Navigator.pop(context),
