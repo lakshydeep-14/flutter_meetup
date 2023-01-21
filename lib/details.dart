@@ -77,79 +77,76 @@ class _DetailsScreenState extends State<DetailsScreen> {
           ],
         ),
       ),
-      body: SafeArea(
-        child: SingleChildScrollView(
-            padding: const EdgeInsets.only(bottom: 50),
-            child: Column(
-              children: [
-                _image(widget.artists.photo),
-                Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                widget.artists.title,
-                                style: const TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.bold),
-                              ),
-                              _rating(double.parse(widget.artists.rating)),
-                            ],
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: [
-                              _price(widget.artists.price),
-                              _location(widget.artists.location)
-                            ],
-                          )
-                        ],
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Row(
-                            children: [
-                              _artistImage(widget.artists.artistPhoto),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              Text(
-                                widget.artists.artistName,
-                                style: const TextStyle(
-                                    fontSize: 18, fontWeight: FontWeight.w500),
-                              ),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              const Text(
-                                "Added on: ",
-                                style: TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.normal),
-                              ),
-                              _date(DateTime.now()),
-                            ],
-                          )
-                        ],
-                      ),
-                      _desc(widget.artists.desc),
-                    ],
-                  ),
-                )
-              ],
-            )),
-      ),
+      body: SingleChildScrollView(
+          padding: const EdgeInsets.only(bottom: 50),
+          child: Column(
+            children: [
+              _image(widget.artists.photo),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              widget.artists.title,
+                              style: const TextStyle(
+                                  fontSize: 20, fontWeight: FontWeight.bold),
+                            ),
+                            _rating(double.parse(widget.artists.rating)),
+                          ],
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            _price(widget.artists.price),
+                            _location(widget.artists.location)
+                          ],
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            _artistImage(widget.artists.artistPhoto),
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            Text(
+                              widget.artists.artistName,
+                              style: const TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.w500),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            const Text(
+                              "Added on: ",
+                              style: TextStyle(
+                                  fontSize: 14, fontWeight: FontWeight.normal),
+                            ),
+                            _date(DateTime.now()),
+                          ],
+                        )
+                      ],
+                    ),
+                    _desc(widget.artists.desc),
+                  ],
+                ),
+              )
+            ],
+          )),
     );
   }
 
