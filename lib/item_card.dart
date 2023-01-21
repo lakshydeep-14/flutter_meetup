@@ -1,5 +1,8 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_meetup/model.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class ItemCard1 extends StatelessWidget {
   final Artists artists;
@@ -69,89 +72,89 @@ class ItemCard2 extends StatelessWidget {
         ),
         child: Container(
           padding: const EdgeInsets.fromLTRB(5, 10, 5, 10),
-          child: Column(
+          child: Row(
             children: [
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              Column(
                 children: [
-                  const SizedBox(width: 8),
-                  Container(
-                    height: 150,
-                    width: 145,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20.0),
-                      image: DecorationImage(
-                        image: NetworkImage(artists.photo),
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(10.0),
-                      child: Align(
-                          alignment: Alignment.bottomRight, child: Container()),
-                    ),
-                  ),
-                  const SizedBox(width: 20),
-                  Column(
+                  Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const SizedBox(height: 3),
-                      Text(artists.artistName,
-                          style: const TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.black87,
-                          )),
-                      Text(
-                        artists.location,
-                        style: const TextStyle(
-                          color: Colors.black54,
-                          fontWeight: FontWeight.w500,
+                      const SizedBox(width: 8),
+                      Container(
+                        height: 150,
+                        width: 145,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20.0),
+                          image: DecorationImage(
+                            image: NetworkImage(artists.photo),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10.0),
+                          child: Align(
+                              alignment: Alignment.bottomRight,
+                              child: Container()),
                         ),
                       ),
-                      const SizedBox(height: 3),
-                      RichText(
-                          text: TextSpan(children: [
-                        const TextSpan(
-                            text: 'Category : ',
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.w500)),
-                        TextSpan(
-                            text: artists.category,
-                            style: const TextStyle(color: Colors.black)),
-                      ])),
-                      RichText(
-                          text: TextSpan(children: [
-                        const TextSpan(
-                            text: 'Price : ',
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.w500)),
-                        TextSpan(
-                            text: artists.price,
-                            style: const TextStyle(color: Colors.black)),
-                      ])),
-                      SizedBox(
-                        width: 150,
-                        child: RichText(
-                            text: TextSpan(children: [
-                          const TextSpan(
-                              text: 'Description : ',
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w500)),
-                          TextSpan(
-                              text: '${artists.desc.substring(0, 50)}...',
+                      const SizedBox(width: 20),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          const SizedBox(height: 3),
+                          Text(artists.title,
                               style: const TextStyle(
-                                  overflow: TextOverflow.ellipsis,
-                                  color: Colors.black)),
-                        ])),
-                      ),
-                      const SizedBox(height: 5),
-                      Text(
-                        '                        More Details',
-                        style: TextStyle(color: Colors.blue[800]),
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.black87,
+                              )),
+                          Text(
+                            artists.location,
+                            style: const TextStyle(
+                              color: Colors.black54,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          const SizedBox(height: 3),
+                          RichText(
+                              text: TextSpan(children: [
+                            const TextSpan(
+                                text: 'Category : ',
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w500)),
+                            TextSpan(
+                                text: artists.category,
+                                style: const TextStyle(color: Colors.black)),
+                          ])),
+                          RichText(
+                              text: TextSpan(children: [
+                            const TextSpan(
+                                text: 'Price : ',
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w500)),
+                            TextSpan(
+                                text: "NPR. " + artists.price,
+                                style: const TextStyle(color: Colors.black)),
+                          ])),
+                          RatingBarIndicator(
+                            rating: double.parse(artists.rating),
+                            itemBuilder: (context, index) => const Icon(
+                              Icons.star,
+                              color: Colors.amber,
+                            ),
+                            itemCount: 5,
+                            itemSize: 21.0,
+                            direction: Axis.horizontal,
+                          ),
+                          const SizedBox(height: 5),
+                          Text(
+                            '                        More Details',
+                            style: TextStyle(color: Colors.blue[800]),
+                          ),
+                        ],
                       ),
                     ],
                   ),

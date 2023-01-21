@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_meetup/details.dart';
 import 'package:flutter_meetup/item_card.dart';
 
 import 'package:flutter_meetup/json_dummy.dart';
@@ -16,7 +17,7 @@ class _ListArtistState extends State<ListArtist> {
     return Scaffold(
       drawer: const Drawer(),
       appBar: AppBar(
-          backgroundColor: Colors.deepOrange[800],
+          backgroundColor: mainColor,
           actions: [
             IconButton(onPressed: () {}, icon: const Icon(Icons.search_rounded))
           ],
@@ -54,7 +55,13 @@ Widget _recommendedCol() {
               scrollDirection: Axis.horizontal,
               itemCount: data.length,
               itemBuilder: (context, index) {
-                return ItemCard1(artists: data[index]);
+                return GestureDetector(
+                    onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (_) =>
+                                DetailsScreen(artists: data[index]))),
+                    child: ItemCard1(artists: data[index]));
               }),
         ),
       ],
@@ -106,7 +113,12 @@ Widget lists() {
       itemCount: data.length,
       shrinkWrap: true,
       itemBuilder: ((context, index) {
-        return ItemCard2(artists: data[index]);
+        return GestureDetector(
+            onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (_) => DetailsScreen(artists: data[index]))),
+            child: ItemCard2(artists: data[index]));
       }),
     ),
   );
